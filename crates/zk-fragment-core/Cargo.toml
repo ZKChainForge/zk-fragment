@@ -1,0 +1,22 @@
+[package]
+name = "zk-fragment-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Core fragmentation engine for ZK circuits"
+
+[dependencies]
+zk-fragment-graph = { path = "../zk-fragment-graph" }
+plonky2.workspace = true
+plonky2_field.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+log.workspace = true
+indexmap.workspace = true
+
+[dev-dependencies]
+env_logger.workspace = true
+rand.workspace = true
