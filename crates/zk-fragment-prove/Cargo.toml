@@ -1,0 +1,36 @@
+[package]
+name = "zk-fragment-prove"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+plonky2 = { version = "0.1", features = ["parallel"] }
+plonky2_field = "0.1"
+plonky2_util = "0.1"
+anyhow = "1.0"
+log = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+rand = "0.8"
+thiserror = "1.0"
+
+# From week 1-2
+zk-fragment-graph = { path = "../zk-fragment-graph" }
+zk-fragment-core = { path = "../zk-fragment-core" }
+
+[dev-dependencies]
+env_logger = "0.11"
+criterion = "0.5"
+
+[[example]]
+name = "prove_single_fragment"
+path = "../examples/week3/prove_single_fragment.rs"
+
+[[example]]
+name = "prove_two_fragments"
+path = "../examples/week3/prove_two_fragments.rs"
+
+[[example]]
+name = "boundary_demo"
+path = "../examples/week3/boundary_demo.rs"
